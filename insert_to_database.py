@@ -20,3 +20,4 @@ while True:
         mycursor.execute("INSERT INTO Sensors (name, value, timepoint) VALUES (%s, %s, %s)", ("humidity", humidity, timepoint))
         mycursor.execute("INSERT INTO Sensors (name, value, timepoint) VALUES (%s, %s, %s)", ("temperature", temperature, timepoint))
         print(humidity, temperature, timepoint)
+        db.commit()
